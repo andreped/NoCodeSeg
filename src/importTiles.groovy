@@ -25,7 +25,7 @@
  */
  
  //Requirement:
-//QuPath version > 0.2.*
+//QuPath version > 0.2*
 //See https://qupath.readthedocs.io/en/latest/docs/scripting/overview.html
 
 
@@ -51,8 +51,6 @@ def imageData = getCurrentImageData();
 def hierarchy = imageData.getHierarchy();
 def server = imageData.getServer();
 def plane = getCurrentViewer().getImagePlane();
-
-// update
 
 // Get a list of image files, stopping early if none can be found
 def dirOutput = new File(pathOutput);
@@ -141,7 +139,3 @@ javafx.application.Platform.runLater {
     System.gc();
 }
 Thread.sleep(100);
-
-
-
-
