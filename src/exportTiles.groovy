@@ -1,7 +1,9 @@
 /**
  * Script to export annotations as labeled tiles for QuPath > 0.2*
  *
- * All patches will be saved in the same user-defined directory, where the individual ID is saved as JPEG images
+ * All patches will be exported to the same directory called 'tiles' inside the Project directory
+ *
+ * Each patch's filename contains the original WSI ID, and are saved as JPEG images
  *
  * The downsampling level can be set by the user, default value is 4.
  *
