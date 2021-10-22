@@ -23,10 +23,6 @@
  *
  * @author André Pedersen
  */
- 
- //Requirement:
-//QuPath version > 0.2*
-//See https://qupath.readthedocs.io/en/latest/docs/scripting/overview.html
 
 
 import ij.plugin.filter.ThresholdToSelection

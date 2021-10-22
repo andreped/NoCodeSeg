@@ -14,10 +14,6 @@
  *
  * @author André Pedersen
  */
- 
- //Requirement:
-//QuPath version > 0.2*
-//See https://qupath.readthedocs.io/en/latest/docs/scripting/overview.html
 
 
 import qupath.lib.images.servers.LabeledImageServer
@@ -50,17 +46,21 @@ new TileExporter(imageData)
     .overlap(128)                // Define overlap, in pixel units at the export resolution
     .writeTiles(pathOutput)     // Write tiles to the specified directory
 
-// delete exported patches (only keep annotations), and remove ground truth tiles of small size (mostly glass)
+// attempt to delete unwanted patches, both some formats as well as patches containing mostly glass
+// Iterate through all your tiles
 File folder = new File(pathOutput)
 File[] listOfFiles = folder.listFiles()
-listOfFiles.each { tile ->
-    def fullPath = pathOutput + "/" + tile.getName();
-    print fullPath.length()
-    if (fullPath.endsWith(".jpg") || (fullPath.length() / 1024 < 6))
-        boolean fileSuccessfullyDeleted =  new File(fullPath).delete()
-}
 
-print "Done!"
+listOfFiles.each { tile ->
+    if (tile.getName().endsWith(".jpg")) {
+        tile.getName().delete();
+    } else {
+        long fileSizeInMB = tile.getName().length() / 1024;
+        if (fileSizeInKB < 6) {  // removes files smaller than 6 KBs
+            tile.getName().delete();
+        }
+    }
+}
 
 // relevant for running this within a RunForProject
 Thread.sleep(100);
