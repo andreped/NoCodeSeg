@@ -37,10 +37,9 @@ import static qupath.lib.gui.scripting.QPEx.*
 // --- SET THESE PARAMETERS ---
 def className = 'Epithelium';
 def downsample = 2.0;
-//def pathOutput = QPEx.buildFilePath(QPEx.PROJECT_BASE_DIR, 'masks');
-//def pathOutput =  'F:/Elin/masks/';
 def pathOutput = "C:/DeepMIBprojects/PANDA_512_DS2_2LABELS_GLANDS_070421/4_RESULTS_PRED_ALL_NEG_RADBOUD_181021/PredictionImages/ResultsModels/C01andC02convToC01_tifs_191021/0xxx_4xxx";
 // ----------------------------
+
 
 // Get the main QuPath data structures
 def imageData = getCurrentImageData();
@@ -50,8 +49,9 @@ def plane = getCurrentViewer().getImagePlane();
 
 // Get a list of image files, stopping early if none can be found
 def dirOutput = new File(pathOutput);
+print dirOutput
 if (!dirOutput.isDirectory()) {
-    print dirOutput + ' is not a valid directory!';
+    print pathOutput + ' is not a valid directory!';
     return;
 }
 
