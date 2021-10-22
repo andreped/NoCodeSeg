@@ -50,7 +50,17 @@ new TileExporter(imageData)
     .overlap(128)                // Define overlap, in pixel units at the export resolution
     .writeTiles(pathOutput)     // Write tiles to the specified directory
 
-print 'Done!'
+// delete exported patches (only keep annotations), and remove ground truth tiles of small size (mostly glass)
+File folder = new File(pathOutput)
+File[] listOfFiles = folder.listFiles()
+listOfFiles.each { tile ->
+    def fullPath = pathOutput + "/" + tile.getName();
+    print fullPath.length()
+    if (fullPath.endsWith(".jpg") || (fullPath.length() / 1024 < 6))
+        boolean fileSuccessfullyDeleted =  new File(fullPath).delete()
+}
+
+print "Done!"
 
 // relevant for running this within a RunForProject
 Thread.sleep(100);
