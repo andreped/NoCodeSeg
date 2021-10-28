@@ -1,5 +1,5 @@
 /**
- * Script to import binary masks & create annotations, adding them to the current object hierarchy for QuPath > 0.2*
+ * Script to import binary masks & create annotations, adding them to the current object hierarchy for QuPath >= v0.3.*
  *
  * It is assumed that each mask is stored in a TIFF file in a project subdirectory called 'masks'.
  * Each file name should be of the form:
@@ -36,9 +36,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 
 // --- SET THESE PARAMETERS ---
 def className = 'Epithelium';
-def downsample = 2.0;
-//def pathOutput = "C:/DeepMIBprojects/PANDA_512_DS2_2LABELS_GLANDS_070421/4_RESULTS_PRED_ALL_NEG_RADBOUD_181021/PredictionImages/ResultsModels/C01andC02convToC01_tifs_191021/0xxx_4xxx";
-def pathOutput = "C:/Users/andrp/workspace/qupath_projects/test_scripts/tiles/"
+def pathOutput = "C:/QuPath/ELIN_train104stk_test36stk_HE_201021/tiles/11435_HE/Labels"
 // ----------------------------
 
 
@@ -48,9 +46,7 @@ def hierarchy = imageData.getHierarchy();
 def server = imageData.getServer();
 def plane = getCurrentViewer().getImagePlane();
 
-print name
 def name = GeneralTools.getNameWithoutExtension(imageData.getServer().getMetadata().getName())
-pathoutput += "/" + name + "/"
 print pathOutput
 print name
 
@@ -80,12 +76,12 @@ files.each {
     String hash = "#" * Math.ceil((counter * spaces) / nbPatches);
     println String.format("[%-" + spaces + "s] %d%s%d\r", hash, counter, '/', nbPatches);
     counter ++;
-    def name = GeneralTools.getNameWithoutExtension(getProjectEntry().getImageName())
+    def currentName = GeneralTools.getNameWithoutExtension(getProjectEntry().getImageName())
     def filename = it.getName();
-    if (!filename.contains(name) || !filename.endsWith("].tif"))
+    if (!filename.contains(currentName) || !filename.endsWith("].png"))
         return;
     try {
-        annotations << parseAnnotation(it, plane, downsample);
+        annotations << parseAnnotation(it, plane);
     } catch (Exception e) {
         print 'Unable to parse annotation from ' + it.getName() + ': ' + e.getLocalizedMessage();
     }
@@ -97,26 +93,28 @@ files.each {
  * @param file File containing the TIFF image mask.  The image name must be formatted as above.
  * @return The PathAnnotationObject created based on the mask & file name contents.
  */
-def parseAnnotation(File file, ImagePlane plane, float downsample) {
+def parseAnnotation(File file, ImagePlane plane) {
     
     def filename  = file.getName();
+    print filename
+    print file.getPath()
     def imp = IJ.openImage(file.getPath());
     
     def parts = filename.split(' ');
-    def regionParts = parts[-1].split(".tif")[0].split(",");
+    def regionParts = parts[-1].split(".png")[0].split(",");
+    def downsample = regionParts[0].replace("[d=", "") as float;
 
     // Parse the x, y coordinates of the region
-    int x = regionParts[0].replace("[x=", "") as int;
-    int y = regionParts[1].replace("y=", "") as int;
+    int x = regionParts[1].replace("x=", "") as int;
+    int y = regionParts[2].replace("y=", "") as int;
     
     // To create the ROI, travel into ImageJ
     def bp = imp.getProcessor();
-    bp.setThreshold(0.5, Double.POSITIVE_INFINITY, ImageProcessor.NO_LUT_UPDATE);
-    
     int n = bp.getStatistics().max as int;
     def rois = RoiLabeling.labelsToConnectedROIs(bp, n);
     
     def pathObjects = rois.collect {
+        print it
         if (it == null)
            return;
        def roiQ = IJTools.convertToROI(it, -x/downsample, -y/downsample, downsample, plane);
@@ -128,12 +126,17 @@ def parseAnnotation(File file, ImagePlane plane, float downsample) {
 
 resolveHierarchy();
 
-// merge all annotations
-selectAnnotations();
-mergeSelectedAnnotations();
-
 // finally, rename to class of interest
 replaceClassification(null, className);
+
+// merge all annotations
+selectObjects {
+   //Some criteria here
+   return it.isAnnotation() && it.getPathClass() == getPathClass(className)
+}
+mergeSelectedAnnotations();
+
+print "Done!"
 
 // relevant for running this within a RunForProject
 Thread.sleep(100);

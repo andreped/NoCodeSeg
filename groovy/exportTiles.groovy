@@ -30,7 +30,7 @@ double glassThreshold = 50
 double percentageThreshold = 0.25
 int patchSize = 512
 int pixelOverlap = 128
-def imageExtension = ".png"
+def imageExtension = ".tif"
 int nb_channels = 3;
 // --------------------------------
 
@@ -47,7 +47,7 @@ def labelServer = new LabeledImageServer.Builder(imageData)
     .backgroundLabel(0, ColorTools.WHITE) // Specify background label (usually 0 or 255)
     .downsample(downsample)    // Choose server resolution; this should match the resolution at which tiles are exported
     .addLabel(className, 1)      // Choose output labels (the order matters!)
-    .multichannelOutput(true)  // If true, each label is a different channel (required for multiclass probability)
+    .multichannelOutput(false)  // If true, each label is a different channel (required for multiclass probability)
     .build()
 
 // Create an exporter that requests corresponding tiles from the original & labeled image servers
@@ -105,19 +105,19 @@ listOfFiles.each { tile ->
     
     // remove patches containing less tissue, dependent on user-defined threshold, and move accepted patches to respective folders
     def amountTissue = tissue / (image.getWidth() * image.getHeight());
-    def currLabelPatch = new File(pathOutput + "/" + tile.getName().split(imageExtension)[0] + ".tif")
+    def currLabelPatch = new File(pathOutput + "/" + tile.getName().split(imageExtension)[0] + ".png")
     if (amountTissue < percentageThreshold) {
         tile.delete()
         currLabelPatch.delete()
     } else {
         tile.renameTo(pathOutput + "/Images/" + tile.getName())
-        currLabelPatch.renameTo(new File(pathOutput + "/Labels/" + tile.getName().split(imageExtension)[0] + ".tif"))
+        currLabelPatch.renameTo(new File(pathOutput + "/Labels/" + tile.getName().split(imageExtension)[0] + ".png"))
     }
 }
 
 print "Done!"
 
-// relevant for running this within a RunForProject
+// Reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
 javafx.application.Platform.runLater {
     getCurrentViewer().getImageRegionStore().cache.clear();
