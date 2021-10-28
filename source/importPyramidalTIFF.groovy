@@ -54,9 +54,6 @@ addObjects(annotations)
 
 // finally, rename to class of interest
 replaceClassification(null, className);
-selectObjects {
-   return it.isAnnotation() && it.getPathClass() == getPathClass(className)
-}
 
 // reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
