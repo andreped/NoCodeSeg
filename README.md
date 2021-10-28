@@ -1,6 +1,6 @@
 # NoCodeSeg: deep segmentation made easy!
 
-This is the official repository for the publication *"Code-free development and deployment of deep segmentation models for digital pathology"*. It contains source code relevant for importing/exporting annotations/predictions in QuPath.
+This is the official repository for the publication *"Code-free development and deployment of deep segmentation models for digital pathology"*. It contains source code relevant for importing/exporting annotations/predictions in QuPath, from DeepMIB and FastPathology.
 
 ## Citation
 Please, consider citing our paper, if you find the work useful:
