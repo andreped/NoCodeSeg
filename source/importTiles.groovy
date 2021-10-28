@@ -36,7 +36,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 
 // --- SET THESE PARAMETERS ---
 def className = 'Epithelium';
-def pathOutput = "C:/QuPath/ELIN_train104stk_test36stk_HE_201021/tiles/11435_HE/Labels"
+def pathOutput = "path-to-exported-labels"
 // ----------------------------
 
 
