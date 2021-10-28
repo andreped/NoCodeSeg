@@ -57,7 +57,6 @@ replaceClassification(null, className);
 selectObjects {
    return it.isAnnotation() && it.getPathClass() == getPathClass(className)
 }
-selectAnnotations();
 
 // reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
