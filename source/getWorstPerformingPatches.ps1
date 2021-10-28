@@ -1,3 +1,3 @@
-Get-Content "C:\DeepMIBprojects\PANDA_512_DS2_2LABELS_GLANDS_070421\4_RESULTS_PRED_37kOLD_30kNEWpredISUP0_201021\C01GTgt1_C02GT_0_C01modgt1_miou635-65_281021.txt"
-| ForEach {Move-Item -Path .\$_ -Destination "C:\DeepMIBprojects\PANDA_512_DS2_2LABELS_GLANDS_070421\4_RESULTS_PRED_37kOLD_30kNEWpredISUP0_201021\C01GTgt1_C02GT_0_C01modgt1_miou635-65_281021"
+Get-Content "C:/path-to-list-of-worst-performing-patches.txt"
+| ForEach {Move-Item -Path .\$_ -Destination "C:/path-to-directory-of-removed-patches"
 }
