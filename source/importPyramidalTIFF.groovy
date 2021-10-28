@@ -1,5 +1,5 @@
 /**
- * Script to import uint8 pyramidal TIFF images as annotations for QuPath > 0.3*
+ * Script to import uint8 pyramidal TIFF images as annotations for QuPath >= v0.3*
  *
  * It is assumed that the TIFF lies in a user-defined directory with the same name but with the extension '.tiff'
  * 
