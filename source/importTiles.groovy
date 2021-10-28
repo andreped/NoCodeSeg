@@ -36,7 +36,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 
 // --- SET THESE PARAMETERS ---
 def className = 'Epithelium';
-def pathOutput = "path-to-exported-labels"
+def pathOutput = "C:/path-to-exported-labels-dir"
 // ----------------------------
 
 
@@ -131,14 +131,13 @@ replaceClassification(null, className);
 
 // merge all annotations
 selectObjects {
-   //Some criteria here
    return it.isAnnotation() && it.getPathClass() == getPathClass(className)
 }
 mergeSelectedAnnotations();
 
 print "Done!"
 
-// relevant for running this within a RunForProject
+// reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
 javafx.application.Platform.runLater {
     getCurrentViewer().getImageRegionStore().cache.clear();

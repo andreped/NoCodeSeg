@@ -117,7 +117,7 @@ listOfFiles.each { tile ->
 
 print "Done!"
 
-// Reclaim memory - relevant for running this within a RunForProject
+// reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
 javafx.application.Platform.runLater {
     getCurrentViewer().getImageRegionStore().cache.clear();

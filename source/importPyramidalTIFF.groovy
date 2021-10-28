@@ -19,9 +19,9 @@ import qupath.lib.analysis.images.ContourTracing;
 import static qupath.lib.gui.scripting.QPEx.*
 
 // --- SET THESE PARAMETERS ---
-def masksPath = "E:/DigitalPathology/Henrik-DP/masks"
+def masksPath = "C:/path-to-masks-dir"
 def downsample = 2.0;
-def extension = ".tiff"
+def extension = ".tiff"  // pyramidal TIFF
 def className = "Epithelium"
 // ----------------------------
 
@@ -53,10 +53,13 @@ def annotations = ContourTracing.createAnnotations(band, request, 1, 1)
 addObjects(annotations)
 
 // finally, rename to class of interest
-selectAnnotations();
 replaceClassification(null, className);
+selectObjects {
+   return it.isAnnotation() && it.getPathClass() == getPathClass(className)
+}
+selectAnnotations();
 
-// relevant for running this within a RunForProject
+// reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
 javafx.application.Platform.runLater {
     getCurrentViewer().getImageRegionStore().cache.clear();
