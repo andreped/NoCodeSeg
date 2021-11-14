@@ -2,7 +2,6 @@
  * Script to export annotations as labeled tiles for QuPath > 0.2*.
  *
  * All patches will be exported to the same directory called 'tiles' inside the Project directory
-
  * The patches will be filtered based on tissue content, and finally moved to respective the
  * subdirectories: Images and Labels within the 'tiles' folder
  *

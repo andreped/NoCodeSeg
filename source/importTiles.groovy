@@ -35,7 +35,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 
 
 // --- SET THESE PARAMETERS ---
-def className = 'Epithelium';
+def className = "Epithelium";
 def pathOutput = "C:/path-to-exported-labels-dir"
 // ----------------------------
 
@@ -96,12 +96,17 @@ files.each {
 def parseAnnotation(File file, ImagePlane plane) {
     
     def filename  = file.getName();
-    print filename
-    print file.getPath()
     def imp = IJ.openImage(file.getPath());
     
     def parts = filename.split(' ');
-    def regionParts = parts[-1].split(".png")[0].split(",");
+    def regionParts = parts[-1].split(".png")[0].split(",") as List;
+    
+    // Handle scenario where there was not done any downsampling (d=1 skipped!)
+    if (regionParts.size() == 4) {
+        regionParts[0] = regionParts[0][1..-1]
+        regionParts.add(0, "[d=1")
+    }
+    
     def downsample = regionParts[0].replace("[d=", "") as float;
 
     // Parse the x, y coordinates of the region
@@ -114,7 +119,6 @@ def parseAnnotation(File file, ImagePlane plane) {
     def rois = RoiLabeling.labelsToConnectedROIs(bp, n);
     
     def pathObjects = rois.collect {
-        print it
         if (it == null)
            return;
        def roiQ = IJTools.convertToROI(it, -x/downsample, -y/downsample, downsample, plane);
@@ -130,6 +134,7 @@ resolveHierarchy();
 replaceClassification(null, className);
 
 // merge all annotations
+print "Merging (might take some time...)"
 selectObjects {
    return it.isAnnotation() && it.getPathClass() == getPathClass(className)
 }

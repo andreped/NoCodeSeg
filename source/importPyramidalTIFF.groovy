@@ -20,7 +20,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 
 // --- SET THESE PARAMETERS ---
 def masksPath = "C:/path-to-masks-dir"
-def downsample = 2.0;
+def downsample = 1.0;
 def extension = ".tiff"  // pyramidal TIFF
 def className = "Epithelium"
 // ----------------------------
@@ -54,6 +54,8 @@ addObjects(annotations)
 
 // finally, rename to class of interest
 replaceClassification(null, className);
+
+print "Done!"
 
 // reclaim memory - relevant for running this within a RunForProject
 Thread.sleep(100);
