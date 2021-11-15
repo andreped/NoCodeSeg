@@ -37,7 +37,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 // --- SET THESE PARAMETERS ---
 def className = "Epithelium";
 def pathOutput = "C:/path-to-exported-labels-dir"
-def patchFormat = "png"  // set to "png" or "tif"
+def patchFormat = "tif"  // set to "png" or "tif"
 // ----------------------------
 
 
