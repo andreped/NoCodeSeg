@@ -37,6 +37,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 // --- SET THESE PARAMETERS ---
 def className = "Epithelium";
 def pathOutput = "C:/path-to-exported-labels-dir"
+def patchFormat = "png"  // set to "png" or "tif"
 // ----------------------------
 
 
@@ -78,7 +79,7 @@ files.each {
     counter ++;
     def currentName = GeneralTools.getNameWithoutExtension(getProjectEntry().getImageName())
     def filename = it.getName();
-    if (!filename.contains(currentName) || !filename.endsWith("].png"))
+    if (!filename.contains(currentName) || !filename.endsWith("]." + patchFormat))
         return;
     try {
         annotations << parseAnnotation(it, plane);
