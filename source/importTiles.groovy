@@ -100,7 +100,7 @@ def parseAnnotation(File file, ImagePlane plane) {
     def imp = IJ.openImage(file.getPath());
     
     def parts = filename.split(' ');
-    def regionParts = parts[-1].split(".png")[0].split(",") as List;
+    def regionParts = parts[-1].split(",") as List;
     
     // Handle scenario where there was not done any downsampling (d=1 skipped!)
     if (regionParts.size() == 4) {
