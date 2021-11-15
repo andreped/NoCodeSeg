@@ -20,7 +20,7 @@ import static qupath.lib.gui.scripting.QPEx.*
 
 // --- SET THESE PARAMETERS ---
 def masksPath = "C:/path-to-masks-dir"
-def downsample = 1.0;
+def downsample = 2.0;
 def extension = ".tiff"  // pyramidal TIFF
 def className = "Epithelium"
 // ----------------------------
@@ -32,8 +32,9 @@ if (!dirOutput.isDirectory()) {
     return;
 }
 
-// get current WSI
+// get current WSI, update paths to file
 def currWSIName = GeneralTools.getNameWithoutExtension(getProjectEntry().getImageName())
+masksPath += currWSIName
 def currFullPath = masksPath + "/" + currWSIName + extension
 
 // check if file exists, if no return
