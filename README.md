@@ -15,7 +15,7 @@ The repository contains trained deep models for epithelium segmentation of HE an
 [![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY)
 
 A video tutorial of the proposed pipeline was published on [YouTube](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen).
-It includes the steps for: 
+It demonstrates the steps for: 
 * Installing the softwares
 * QuPath
   * Loading a project and exporting annotations as tiles/patches
