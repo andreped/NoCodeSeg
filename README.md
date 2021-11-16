@@ -15,3 +15,6 @@ Please, consider citing our paper, if you find the work useful:
   archivePrefix={arXiv},
   primaryClass={eess.IV}}
 </pre>
+
+## Data
+The 251 annotated WSIs are being processed before publishing on [dataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
