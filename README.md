@@ -33,7 +33,7 @@ It demonstrates the steps for:
   * Deploying model and render predictions on top of the WSI in real time
 
 ## Data
-The 251 annotated WSIs are being processed before publishing on [DataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
+The 251 annotated WSIs are being processed before publishing on [DataverseNO](https://dataverse.no/), where it will be made **openly available for anyone**
 
 ### Reading annotations
 The annotations are stored as tiled, pyramidal TIFFs, which makes it easy to generate patches from the data without the need for any preprocessing. Reading these files and working with them to generate training data, is already described in the [tutorial video](https://github.com/andreped/NoCodeSeg#getting-started) above.
