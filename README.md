@@ -12,12 +12,28 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 ## Getting started
 
-A video tutorial of the proposed pipeline can be found [here](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen):
-
 [![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY)
 
+A video tutorial of the proposed pipeline was published on [YouTube](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen).
+It includes the steps for: 
+* Installing the softwares
+* QuPath
+  * Loading a project and exporting annotations as tiles/patches
+  * Importing predictions for MIB and FastPathology as annotations
+* MIB
+  * Loading tiles into MIB
+  * Preprocessing tiles for training
+  * Configuring and training deep segmentation models
+  * Exporting the trained model into the ONNX format
+* FastPathology
+  * Creating configuration file for ONNX model
+  * Importing ONNX model
+  * Create project, and load WSIs into project
+  * Select which WSI to render
+  * Deploying model and render predictions on top of the WSI in real time
+
 ## Data
-The 251 annotated WSIs are being processed before publishing on [dataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
+The 251 annotated WSIs are being processed before publishing on [DataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
 
 ## Citation
 Please, consider citing our paper, if you find the work useful:
