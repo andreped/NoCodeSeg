@@ -16,21 +16,21 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 A video tutorial of the proposed pipeline was published on [YouTube](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen).
 It demonstrates the steps for: 
-* Installing the softwares
+* Downloading and installing the softwares
 * QuPath
-  * Loading a project and exporting annotations as tiles/patches
-  * Importing predictions for MIB and FastPathology as annotations
+  * Create a project, then export annotations as patches with label files
+  * Export patches from unannotated images for prediction in DeepMIB
+  * (later) Import predictions for MIB and FastPathology as annotations
 * MIB
-  * Loading tiles into MIB
-  * Preprocessing tiles for training
-  * Configuring and training deep segmentation models
-  * Exporting the trained model into the ONNX format
+  * Use the annotated patches/labels exported from QuPath
+  * Configuring and training deep segmentation models (i.e. U-Net/SegNet)
+  * Use the trained U-net to predict unannotated patches exported from QuPath
+  * Export trained models into the ONNX format for use in FastPathology
 * FastPathology
-  * Creating configuration file for ONNX model
-  * Importing ONNX model
-  * Create project, and load WSIs into project
-  * Select which WSI to render
-  * Deploying model and render predictions on top of the WSI in real time
+  * Importing and creating a configuration file for the DeepMIB exported U-Net ONNX model
+  * Create a project and load WSIs into a project
+  * Use the U-Net ONNX model to render predictions on top of the WSI in real time
+  * Export full sized WSI tiffs for import into QuPath
 
 ## Data
 The 251 annotated WSIs are being processed before publishing on [DataverseNO](https://dataverse.no/), where it will be made **openly available for anyone**
