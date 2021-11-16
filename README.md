@@ -1,7 +1,7 @@
 <p float="left">
-  <img src="figures/deepmib-demo.gif" width="250" />
-  <img src="figures/inference-demo.gif" width="250" /> 
-  <img src="figures/qupath-demo.gif" width="250" />
+  <img src="figures/deepmib-demo.gif" />
+  <img src="figures/inference-demo.gif" /> 
+  <img src="figures/qupath-demo.gif" />
 </p>
 
 # NoCodeSeg: Deep segmentation made easy!
