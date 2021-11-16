@@ -14,6 +14,9 @@ A video tutorial of the proposed pipeline can be found [here](https://www.youtub
 
 [![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY)
 
+## Data
+The 251 annotated WSIs are being processed before publishing on [dataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
+
 ## Citation
 Please, consider citing our paper, if you find the work useful:
 <pre>
@@ -25,6 +28,3 @@ Please, consider citing our paper, if you find the work useful:
   archivePrefix={arXiv},
   primaryClass={eess.IV}}
 </pre>
-
-## Data
-The 251 annotated WSIs are being processed before publishing on [dataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
