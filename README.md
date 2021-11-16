@@ -1,4 +1,4 @@
-# NoCodeSeg: deep segmentation made easy!
+# NoCodeSeg: Deep segmentation made easy!
 
 <img src="figures/inference-demo.gif" width="600">
 
