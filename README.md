@@ -1,6 +1,10 @@
-# NoCodeSeg: Deep segmentation made easy!
+<p float="left">
+  <img src="figures/deepmib-demo.gif" width="250" />
+  <img src="figures/inference-demo.gif" width="250" /> 
+  <img src="figures/qupath-demo.gif" width="250" />
+</p>
 
-<img src="figures/deepmib-demo.gif" width="400"><img src="figures/inference-demo.gif" width="400"> 
+# NoCodeSeg: Deep segmentation made easy!
 
 This is the official repository for the manuscript *"Code-free development and deployment of deep segmentation models for digital pathology"*, submitted to Frontiers in Medicine. 
 
@@ -9,6 +13,9 @@ The repository contains trained deep models for epithelium segmentation of HE an
 A video tutorial of the proposed pipeline can be found [here](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen):
 
 [![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY)
+
+## Data
+The 251 annotated WSIs are being processed before publishing on [dataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
 
 ## Citation
 Please, consider citing our paper, if you find the work useful:
@@ -21,6 +28,3 @@ Please, consider citing our paper, if you find the work useful:
   archivePrefix={arXiv},
   primaryClass={eess.IV}}
 </pre>
-
-## Data
-The 251 annotated WSIs are being processed before publishing on [dataverseNO](https://dataverse.no/), where it can be downloaded and used for free by anyone.
