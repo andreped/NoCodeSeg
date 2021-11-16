@@ -1,6 +1,6 @@
 # NoCodeSeg: Deep segmentation made easy!
 
-<img src="figures/inference-demo.gif" width="600">
+<img src="figures/deepmib-demo.gif" width="400"><img src="figures/inference-demo.gif" width="400"> 
 
 This is the official repository for the manuscript *"Code-free development and deployment of deep segmentation models for digital pathology"*, submitted to Frontiers in Medicine. 
 
