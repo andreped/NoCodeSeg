@@ -27,7 +27,7 @@ It demonstrates the steps for:
   * Use the trained U-net to predict unannotated patches exported from QuPath
   * Export trained models into the ONNX format for use in FastPathology
 * FastPathology
-  * Importing and creating a configuration file for the DeepMIB exported U-Net ONNX model
+  * Importing and creating a configuration file for the DeepMIB exported ONNX model
   * Create a project and load WSIs into a project
   * Use the U-Net ONNX model to render predictions on top of the WSI in real time
   * Export full sized WSI tiffs for import into QuPath
