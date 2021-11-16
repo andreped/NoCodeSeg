@@ -1,4 +1,6 @@
-# NoCodeSeg: deep segmentation made easy!
+# NoCodeSeg: Deep segmentation made easy!
+
+<img src="figures/inference-demo.gif" width="600">
 
 This is the official repository for the manuscript *"Code-free development and deployment of deep segmentation models for digital pathology"*, submitted to Frontiers in Medicine. 
 
@@ -6,7 +8,7 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 A video tutorial of the proposed pipeline can be found [here](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen):
 
-[![Watch the video](https://img.youtube.com/vi/9dTfUwnL6zY/0.jpg)](https://youtu.be/9dTfUwnL6zY)
+[![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY)
 
 ## Citation
 Please, consider citing our paper, if you find the work useful:
