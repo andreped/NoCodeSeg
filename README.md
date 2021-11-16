@@ -4,6 +4,8 @@ This is the official repository for the manuscript *"Code-free development and d
 
 The repository contains trained deep models for epithelium segmentation of HE and CD3 immunostained WSIs, as well as source code relevant for importing/exporting annotations/predictions in [QuPath](https://qupath.github.io/), from [DeepMIB](http://mib.helsinki.fi/downloads.html), and [FastPathology](https://github.com/AICAN-Research/FAST-Pathology).
 
+A video demonstration/tutorial of the proposed pipeline can be found [here](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen).
+
 ## Citation
 Please, consider citing our paper, if you find the work useful:
 <pre>
