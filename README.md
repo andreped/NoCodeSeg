@@ -1,4 +1,11 @@
-<img src="figures/deepmib-demo.gif" width="250"> <img src="figures/inference-demo.gif" width="250"> <img src="figures/qupath-demo.gif" width="250"> 
+
+This will display the three images side by side if the images are not too wide.
+
+<p float="left">
+  <img src="figures/deepmib-demo.gif" width="250" />
+  <img src="figures/inference-demo.gif" width="250" /> 
+  <img src="figures/qupath-demo.gif" width="250" />
+</p>
 
 # NoCodeSeg: Deep segmentation made easy!
 
