@@ -57,7 +57,7 @@ Pixels here will be one-to-one with the original WSI. To generate patches for tr
 ### Models
 Note that the trained models shared [here](https://github.com/andreped/NoCodeSeg/tree/main/models) can only be used for academic purposes. This is due to MIB's license, which can be found in the same [directory](https://github.com/andreped/NoCodeSeg/blob/main/models/LICENSE).
 
-## Citation
+## How to cite
 Please, consider citing our paper, if you find the work useful:
 <pre>
   @misc{pettersen2021codefree,
