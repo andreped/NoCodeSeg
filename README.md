@@ -12,7 +12,7 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 ## Getting started
 
-[![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY)
+[![Watch the video](figures/youtube-thumbnail.jpg)](https://youtu.be/9dTfUwnL6zY).
 
 A video tutorial of the proposed pipeline was published on [YouTube](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen).
 It demonstrates the steps for: 
@@ -31,6 +31,8 @@ It demonstrates the steps for:
   * Create a project and load WSIs into a project
   * Use the U-Net ONNX model to render predictions on top of the WSI in real time
   * Export full sized WSI tiffs for import into QuPath
+
+Note that the version of FastPathology used in the demonstration was v0.2.0 (this exact version can be downloaded from [here](https://github.com/AICAN-Research/FAST-Pathology/releases/tag/v0.2.0)). The software is continuously in development, and features presented in the video are therefore prone to changes in the near future. To get information regarding changes and new releases, please, visit the [FastPathology repository](https://github.com/AICAN-Research/FAST-Pathology).
 
 ## Data
 The 251 annotated WSIs are being processed before publishing on [DataverseNO](https://dataverse.no/), where it will be made **openly available for anyone**
