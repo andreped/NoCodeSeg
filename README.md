@@ -55,11 +55,11 @@ Pixels here will be one-to-one with the original WSI. To generate patches for tr
 ## Citation
 Please, consider citing our paper, if you find the work useful:
 <pre>
-  @MISC{pettersen2021NoCodeSeg,
-  title={Code-free development and deployment of deep segmentation models for digital pathology},
-  author={Henrik S. Pettersen, Ilya Belevich, Elin S. Røyset, Erik Smistad, Eija Jokitalo, Ingerid Reinertsen, Ingunn Bakke, and André Pedersen},
+  @misc{pettersen2021codefree,
+  title={Code-free development and deployment of deep segmentation models for digital pathology}, 
+  author={Henrik Sahlin Pettersen and Ilya Belevich and Elin Synnøve Røyset and Erik Smistad and Eija Jokitalo and Ingerid Reinertsen and Ingunn Bakke and André Pedersen},
   year={2021},
-  eprint={some.numbers},
+  eprint={2111.08430},
   archivePrefix={arXiv},
-  primaryClass={eess.IV}}
+  primaryClass={q-bio.QM}}
 </pre>
