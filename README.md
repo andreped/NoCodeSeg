@@ -1,8 +1,13 @@
+<!---
 <p float="left">
   <img src="figures/deepmib-demo.gif" />
   <img src="figures/inference-demo.gif" /> 
   <img src="figures/qupath-demo.gif" />
 </p>
+-->
+
+<img src="figures/merged-demos.gif" />
+
 
 # NoCodeSeg: Deep segmentation made easy!
 
