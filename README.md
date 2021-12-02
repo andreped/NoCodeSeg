@@ -75,3 +75,15 @@ Please, consider citing our paper, if you find the work useful:
   archivePrefix={arXiv},
   primaryClass={q-bio.QM}}
 </pre>
+
+In addition, if you used the data set in your work, please cite the following:
+<pre>
+  @data{TLA01U_2021,
+  author = {Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},
+  publisher = {DataverseNO},
+  title = {{140 HE and 111 CD3-stained colon biopsies of active and inactivate inflammatory bowel disease with epithelium annotated: the IBDColEpi dataset}},
+  year = {2021},
+  version = {DRAFT VERSION},
+  doi = {10.18710/TLA01U},
+  url = {https://doi.org/10.18710/TLA01U}}
+</pre>
