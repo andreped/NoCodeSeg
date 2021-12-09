@@ -42,7 +42,7 @@ It demonstrates the steps for:
 Note that the version of FastPathology used in the demonstration was v0.2.0 (this exact version can be downloaded from [here](https://github.com/AICAN-Research/FAST-Pathology/releases/tag/v0.2.0)). The software is continuously in development, and features presented in the video are therefore prone to changes in the near future. To get information regarding changes and new releases, please, visit the [FastPathology repository](https://github.com/AICAN-Research/FAST-Pathology).
 
 ## Data
-The 251 annotated WSIs are being processed before publishing on [DataverseNO](https://dataverse.no/), where it will be made **openly available for anyone**
+The 251 annotated WSIs are made openly available for anyone on DataverseNO. Click [here](https://doi.org/10.18710/TLA01U) to access the data.
 
 ### Reading annotations
 The annotations are stored as tiled, pyramidal TIFFs, which makes it easy to generate patches from the data without the need for any preprocessing. Reading these files and working with them to generate training data, is already described in the [tutorial video](https://github.com/andreped/NoCodeSeg#getting-started) above.
@@ -83,7 +83,7 @@ In addition, if you used the data set in your work, please cite the following:
   publisher = {DataverseNO},
   title = {{140 HE and 111 CD3-stained colon biopsies of active and inactivate inflammatory bowel disease with epithelium annotated: the IBDColEpi dataset}},
   year = {2021},
-  version = {DRAFT VERSION},
+  version = {V1},
   doi = {10.18710/TLA01U},
   url = {https://doi.org/10.18710/TLA01U}}
 </pre>
