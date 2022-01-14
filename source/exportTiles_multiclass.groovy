@@ -31,6 +31,7 @@ int patchSize = 512  // generated patch size
 int pixelOverlap = 128  // stride for which patches are generated
 def imageExtension = ".tif"
 int nb_channels = 3;
+bool multiChannel = false;
 // --------------------------------
 
 
@@ -45,12 +46,12 @@ mkdirs(pathOutput)
 def tempServer = new LabeledImageServer.Builder(imageData)
     .backgroundLabel(0, ColorTools.WHITE) // Specify background label (usually 0 or 255)
     .downsample(downsample)    // Choose server resolution; this should match the resolution at which tiles are exported
-    .multichannelOutput(false)  // If true, each label is a different channel (required for multiclass probability)
+    .multichannelOutput(multiChannel)  // If true, each label is a different channel (required for multiclass probability)
 
 // assign each class to the server (need to iterate across list array due to multi-class)
 def counter = 1
 classNames.each { currClassName ->
-    tempServer.addLabel(currClassName, 1)  // Choose output labels (the order matters!)
+    tempServer.addLabel(currClassName, counter)  // Choose output labels (the order matters!)
     counter++;
 }
 
