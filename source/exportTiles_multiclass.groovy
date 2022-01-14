@@ -31,7 +31,7 @@ int patchSize = 512  // generated patch size
 int pixelOverlap = 128  // stride for which patches are generated
 def imageExtension = ".tif"
 int nb_channels = 3;
-bool multiChannel = false;
+def multiChannel = false;
 // --------------------------------
 
 
