@@ -23,12 +23,12 @@ import javax.imageio.ImageIO;
 
 
 // ----- SET THESE PARAMETERS -----
-def classNames = ["Benign", "Malign"]   // names of classes of interest
-double downsample = 4
-double glassThreshold = 50
-double percentageThreshold = 0.25
-int patchSize = 512
-int pixelOverlap = 128
+def classNames = ["Benign", "Malign"]   // names of classes of interest (simply add more values to list to add more classes)
+double downsample = 4  // which downsampling level to use -> how much to downsample the patches
+double glassThreshold = 50  // which threshold to use for tissue detection (lower value => more tissue included in mask)
+double percentageThreshold = 0.25  // if a patch contains less than X amount of tissue, it should be neglected (range [0.0, 1.0])
+int patchSize = 512  // generated patch size
+int pixelOverlap = 128  // stride for which patches are generated
 def imageExtension = ".tif"
 int nb_channels = 3;
 // --------------------------------
