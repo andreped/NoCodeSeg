@@ -90,3 +90,6 @@ In addition, if you used the data set in your work, please cite the following:
   doi = {10.18710/TLA01U},
   url = {https://doi.org/10.18710/TLA01U}}
 </pre>
+
+## Acknowledgements
+We wish to give our praise to [Peter Bankhead](https://www.ed.ac.uk/pathology/people/staff-students/peter-bankhead) and the [QuPath](https://github.com/qupath/qupath) team for their continuous support and assistance with QuPath and for assisting us in developing the scripts related to this study.
