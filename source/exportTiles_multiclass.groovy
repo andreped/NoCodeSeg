@@ -42,7 +42,7 @@ def pathOutput = buildFilePath(PROJECT_BASE_DIR, 'tiles')
 mkdirs(pathOutput)
 
 // Create an ImageServer where the pixels are derived from annotations
-def labelServer = new LabeledImageServer.Builder(imageData)
+def tempServer = new LabeledImageServer.Builder(imageData)
     .backgroundLabel(0, ColorTools.WHITE) // Specify background label (usually 0 or 255)
     .downsample(downsample)    // Choose server resolution; this should match the resolution at which tiles are exported
     .multichannelOutput(false)  // If true, each label is a different channel (required for multiclass probability)
@@ -50,12 +50,12 @@ def labelServer = new LabeledImageServer.Builder(imageData)
 // assign each class to the server (need to iterate across list array due to multi-class)
 def counter = 1
 classNames.each { currClassName ->
-    labelServer.addLabel(currClassName, 1)  // Choose output labels (the order matters!)
+    tempServer.addLabel(currClassName, 1)  // Choose output labels (the order matters!)
     counter++;
 }
 
 // finally, build server
-labelServer.build()
+def labelServer = tempServer.build()
 
 // Create an exporter that requests corresponding tiles from the original & labeled image servers
 new TileExporter(imageData)
