@@ -39,7 +39,7 @@ if (!dirOutput.isDirectory()) {
 // get current WSI, update paths to file
 def currWSIName = GeneralTools.getNameWithoutExtension(getProjectEntry().getImageName())
 if (fromFP) {
-	masksPath += currWSIName
+    masksPath += currWSIName
 }
 def path = masksPath + "/" + currWSIName + extension
 
@@ -91,8 +91,8 @@ for(int i = 0; i < classNames.size() - 1; i++) {
     def className1 = classNames[i]
     def className2 = classNames[i + 1]
     
-    def class1 = getAnnotationObjects().find {it.getPathClass() == getPathClass("Benign")}
-    def class2 = getAnnotationObjects().find {it.getPathClass() == getPathClass("Malign")}
+    def class1 = getAnnotationObjects().find {it.getPathClass() == getPathClass(className1)}
+    def class2 = getAnnotationObjects().find {it.getPathClass() == getPathClass(className2)}
     def plane = class1.getROI().getImagePlane()
     if (plane != class2.getROI().getImagePlane()) {
         println 'Annotations are on different planes!'
@@ -118,7 +118,7 @@ for(int i = 0; i < classNames.size() - 1; i++) {
     // rename annotation
     getAnnotationObjects().each { annotation ->
     if (annotation.getPathClass().equals(getPathClass("Difference")))
-        annotation.setPathClass(getPathClass("Benign"))
+        annotation.setPathClass(getPathClass(className1))
     }
 }
 
