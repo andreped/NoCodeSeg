@@ -19,7 +19,9 @@
 
 This is the official repository for the manuscript [*"Code-free development and deployment of deep segmentation models for digital pathology"*](https://arxiv.org/abs/2111.08430), **accepted** for publication in [Frontiers in Medicine](https://www.frontiersin.org/articles/10.3389/fmed.2021.816281).
 
-The repository contains trained deep models for epithelium segmentation of HE and CD3 immunostained WSIs, as well as source code relevant for importing/exporting annotations/predictions in [QuPath](https://qupath.github.io/), from [DeepMIB](http://mib.helsinki.fi/downloads.html), and [FastPathology](https://github.com/AICAN-Research/FAST-Pathology). 
+The repository contains trained deep models for epithelium segmentation of HE and CD3 immunostained WSIs, as well as source code relevant for importing/exporting annotations/predictions in [QuPath](https://qupath.github.io/), from [DeepMIB](http://mib.helsinki.fi/downloads.html), and [FastPathology](https://github.com/AICAN-Research/FAST-Pathology).
+
+All relevant scripts for working with our pipeline can be found in the [source directory](https://github.com/andreped/NoCodeSeg/tree/main/source).
 
 See [here](https://github.com/andreped/NoCodeSeg#data) for how to download the 251 annotated WSIs.
 
