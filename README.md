@@ -17,7 +17,7 @@
 
 ⚠️***Latest: Generic multi-class support has been added to the pipeline!***
 
-This is the official repository for the manuscript [*"Code-free development and deployment of deep segmentation models for digital pathology"*](https://arxiv.org/abs/2111.08430), **accepted** for publication in [Frontiers in Medicine](https://www.frontiersin.org/articles/10.3389/fmed.2021.816281).
+This is the official repository for the manuscript [*"Code-free development and deployment of deep segmentation models for digital pathology"*](https://arxiv.org/abs/2111.08430), **published** open access in [Frontiers in Medicine](https://www.frontiersin.org/articles/10.3389/fmed.2021.816281/full).
 
 The repository contains trained deep models for epithelium segmentation of HE and CD3 immunostained WSIs, as well as source code relevant for importing/exporting annotations/predictions in [QuPath](https://qupath.github.io/), from [DeepMIB](http://mib.helsinki.fi/downloads.html), and [FastPathology](https://github.com/AICAN-Research/FAST-Pathology).
 
@@ -75,13 +75,15 @@ Note that the trained models shared [here](https://github.com/andreped/NoCodeSeg
 ## How to cite
 Please, consider citing our paper, if you find the work useful:
 <pre>
-  @misc{pettersen2021codefree,
-  title={Code-free development and deployment of deep segmentation models for digital pathology}, 
-  author={Henrik Sahlin Pettersen and Ilya Belevich and Elin Synnøve Røyset and Erik Smistad and Eija Jokitalo and Ingerid Reinertsen and Ingunn Bakke and André Pedersen},
-  year={2021},
-  eprint={2111.08430},
-  archivePrefix={arXiv},
-  primaryClass={q-bio.QM}}
+  @ARTICLE{10.3389/fmed.2021.816281,
+  author={Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Simpson, Melanie Rae and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},   
+  title={Code-Free Development and Deployment of Deep Segmentation Models for Digital Pathology},      
+  journal={Frontiers in Medicine},      
+  volume={8},      
+  year={2022},      
+  url={https://www.frontiersin.org/article/10.3389/fmed.2021.816281},       
+  doi={10.3389/fmed.2021.816281},      
+  issn={2296-858X}}
 </pre>
 
 In addition, if you used the data set in your work, please cite the following:
