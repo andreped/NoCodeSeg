@@ -75,7 +75,7 @@ Note that the trained models shared [here](https://github.com/andreped/NoCodeSeg
 ## How to cite
 Please, consider citing our paper, if you find the work useful:
 <pre>
-  @ARTICLE{10.3389/fmed.2021.816281,
+  @article{10.3389/fmed.2021.816281,
   author={Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Simpson, Melanie Rae and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},   
   title={Code-Free Development and Deployment of Deep Segmentation Models for Digital Pathology},      
   journal={Frontiers in Medicine},      
