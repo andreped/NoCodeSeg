@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://zenodo.org/badge/DOI/10.1038/s41598-017-17204-5.svg)](https://arxiv.org/abs/2111.08430)
-[![License](https://img.shields.io/badge/Video-tutorial-red.svg)](https://www.youtube.com/watch?v=9dTfUwnL6zY)
+[![Paper](https://zenodo.org/badge/DOI/10.1038/s41598-017-17204-5.svg)](https://www.frontiersin.org/articles/10.3389/fmed.2021.816281/full)
+[![Tutorial](https://img.shields.io/badge/Video-tutorial-red.svg)](https://www.youtube.com/watch?v=9dTfUwnL6zY)
 
 <!---
 <p float="left">
