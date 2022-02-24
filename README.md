@@ -23,7 +23,7 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 All relevant scripts for working with our pipeline can be found in the [source directory](https://github.com/andreped/NoCodeSeg/tree/main/source).
 
-See [here]() for how to access the trained models.
+See [here](https://github.com/andreped/NoCodeSeg#models) for how to access the trained models.
 
 See [here](https://github.com/andreped/NoCodeSeg#data) for how to download the 251 annotated WSIs.
 
