@@ -23,6 +23,8 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 All relevant scripts for working with our pipeline can be found in the [source directory](https://github.com/andreped/NoCodeSeg/tree/main/source).
 
+Trained model files (.mibDeep for MIB and .onnx for FastPathology) are made openly available on [Google Drive](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH). Simply download the file "trained-models.zip" and uncompress to get access the respective files.
+
 See [here](https://github.com/andreped/NoCodeSeg#data) for how to download the 251 annotated WSIs.
 
 ## Getting started
