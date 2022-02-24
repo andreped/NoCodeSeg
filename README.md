@@ -23,7 +23,7 @@ The repository contains trained deep models for epithelium segmentation of HE an
 
 All relevant scripts for working with our pipeline can be found in the [source directory](https://github.com/andreped/NoCodeSeg/tree/main/source).
 
-Trained model files (.mibDeep for MIB and .onnx for FastPathology) are made openly available on [Google Drive](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH). Simply download the file "trained-models.zip" and uncompress to get access the respective files.
+See [here]() for how to access the trained models.
 
 See [here](https://github.com/andreped/NoCodeSeg#data) for how to download the 251 annotated WSIs.
 
@@ -72,7 +72,9 @@ reader.close()
 Pixels here will be one-to-one with the original WSI. To generate patches for training, it is also possible to use [pyFAST](https://pypi.org/project/pyFAST/), which does the patching for you. For an example see [here](https://fast.eriksmistad.no/python-tutorial-wsi.html#autotoc_md133).
 
 ### Models
-Note that the trained models shared [here](https://github.com/andreped/NoCodeSeg/tree/main/models) can only be used for academic purposes. This is due to MIB's license, which can be found in the same [directory](https://github.com/andreped/NoCodeSeg/blob/main/models/LICENSE).
+Note that the trained models shared [here](https://github.com/andreped/NoCodeSeg/tree/main/models) can only be used for academic purposes. Trained model files (.mibDeep for MIB and .onnx for FastPathology) are also made openly available on [Google Drive](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH). Simply download the file "trained-models.zip" and uncompress to get access the respective files.
+
+The models are purely for academic purposes due to MIB's license, which can be found in the same [directory](https://github.com/andreped/NoCodeSeg/blob/main/models/LICENSE).
 
 ## How to cite
 Please, consider citing our paper, if you find the work useful:
