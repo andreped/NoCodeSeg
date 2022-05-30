@@ -15,7 +15,7 @@
 
 # NoCodeSeg: Deep segmentation made easy!
 
-⚠️***Latest: Generic multi-class support has been added to the pipeline!***
+⚠️***Latest: Generic multiclass support has been added to the pipeline!***
 
 This is the official repository for the manuscript [*"Code-free development and deployment of deep segmentation models for digital pathology"*](https://www.frontiersin.org/articles/10.3389/fmed.2021.816281/full), **published** open access in Frontiers in Medicine.
 
