@@ -18,6 +18,11 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
+      - name: Add bot user
+        run: |
+          git config --local user.email "some.bot@gmail.com"
+          git config --local user.name "[bot]"
+
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
@@ -29,15 +34,12 @@ jobs:
       - name: Get info
         run: |
           cd assets/
+          rm ${{github.workspace}}/assets/test.md
+          git add .
           wget "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu"
           ls -haltr
           python generate_badge.py
           ls -haltr
-
-      - name: Add bot user
-        run: |
-          git config --local user.email "some.bot@gmail.com"
-          git config --local user.name "[bot]"
 
       - name: Commit update
         run: |
