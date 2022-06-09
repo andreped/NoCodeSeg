@@ -1,5 +1,5 @@
 // fetch badge as html code
-var returned_text = fetchText();
+//var returned_text = fetchText();
 
 // write badge to disk, to be able to use it in markdown later
 //download(returned_text, "./source/html/generate-badge.txt", "text/plain");
