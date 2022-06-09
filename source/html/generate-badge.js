@@ -5,7 +5,8 @@ var returned_text = fetchText();
 download(returned_text, "./source/html/generate-badge.txt", "text/plain");
 
 async function download(text, name, type) {
-    const { default: document } = (new jsdom(`...`)).window;
+    const { JSDOM } = require("jsdom");
+    const { default: document } = (new JSDOM(`...`)).window;
     var a = document.getElementById("a");
     var file = new Blob([text], {type: type});
     a.href = URL.createObjectURL(file);
@@ -15,7 +16,8 @@ async function download(text, name, type) {
 async function fetchText() {
 //const { fetch } = await import('node-fetch');  // dynamic import don't work as it should with node-fetch?
 const { default: fetch } = await import('node-fetch')
-const { default: document } = (new jsdom(`...`)).window;
+const { JSDOM } = require("jsdom");
+const { default: document } = (new JSDOM(`...`)).window;
 
 let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
 let response = await fetch(url);
