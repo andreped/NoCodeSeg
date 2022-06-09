@@ -39,6 +39,12 @@ jobs:
           git config --local user.email "some.bot@gmail.com"
           git config --local user.name "[bot]"
 
+      - name: Remove outdated file
+        run: |
+          git rm --cached ${{github.workspace}}/assets/test.md
+          git add .
+          git commit -m "removed file temporarily"
+
       - name: Commit update
         run: |
           git add ${{github.workspace}}/assets/test.md
