@@ -18,12 +18,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      
+
       - name: Install deps
         run: npm install node-fetch
 
       - uses: actions/github-script@v6
         with:
           script: |
-            const script = require('./source/html/generate-badge.js')
+            const fetch = require('node-fetch')
+            const script = await fetch(require('./source/html/generate-badge.js'))
             console.log(script({github, context}))
