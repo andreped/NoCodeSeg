@@ -25,5 +25,5 @@ jobs:
       - uses: actions/github-script@v6
         with:
           script: |
-            const script = require('./source/html/generate-badge.js')
-            console.log(script({github, context}))
+            const { default: fetchText } = await import('${{ github.workspace }}/source/html/generate-badge.js')
+            await fetchText()
