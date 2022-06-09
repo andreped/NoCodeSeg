@@ -22,9 +22,6 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
-
-      # auto-doc
-      uses: dineshsonachalam/markdown-autodocs@v1.0.4
       
       - name: Install deps
         run: pip install numpy pandas
@@ -53,4 +50,8 @@ jobs:
           force: false
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.master }}
+
+      # auto-doc
+      - name: Markdown autodocs
+        uses: dineshsonachalam/markdown-autodocs@v1.0.4
             
