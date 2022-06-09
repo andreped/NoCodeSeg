@@ -2,8 +2,9 @@ name: getbadge
 
 on:
   push:
-    branches:
-      - '*'
+    branches: [ master ]
+    pull_request:
+      branches: [ master ]
 
   #schedule:
   #  # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
@@ -17,7 +18,7 @@ jobs:
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
-      
+
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
@@ -36,6 +37,8 @@ jobs:
 
       - name: Commit update
         run: |
+          git config --local user.email "some.bot@gmail.com"
+          git config --local user.name "[bot]"
           git add ${{github.workspace}}/assets/test.md
           git commit -m "Update download count [skip ci]" -a
 
