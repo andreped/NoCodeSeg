@@ -10,12 +10,12 @@ on:
   #  - cron: "0 12 * * 1"
 
 jobs:
-  auto-update-readme:
+  get-download-count:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Markdown autodocs
-        uses: dineshsonachalam/markdown-autodocs@v1.0.4
+      - uses: actions/github-script@v6
         with:
-          output_file_paths: '[./source/html/badge.md]'
-
+          script: |
+            const script = require('./source/html/generate-badge.js')
+            console.log(script({github, context}))
