@@ -27,10 +27,5 @@ jobs:
           script: |
             //const { fetch } = await import('node-fetch');  // dynamic import don't work as it should with node-fetch?
 
-            const { default: fetch } = await import('node-fetch')
-            const { JSDOM } = require("jsdom");
-            const { default: document } = (new JSDOM(`...`)).window;
-            var fs = require('fs')
-
             const { fetchText } = await import('${{ github.workspace }}/source/html/generate-badge.js')
             await fetchText()
