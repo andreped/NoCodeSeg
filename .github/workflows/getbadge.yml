@@ -2,9 +2,8 @@ name: getbadge
 
 on:
   push:
-    branches: [ master ]
-    pull_request:
-      branches: [ master ]
+    branches: 
+      - '*'
 
   #schedule:
   #  # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
