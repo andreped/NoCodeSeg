@@ -18,15 +18,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 16
-      
-      - name: Fix npm
-        run: |
-          npm install -g npm
-          npm cache clean
-          npm update
 
       - name: Install deps
-        run: npm install node-fetch@2 jsdom fs
+        run: |
+          npm i node-fetch
+          npm install jsdom fs
+          
 
       - uses: actions/github-script@v6
         with:
