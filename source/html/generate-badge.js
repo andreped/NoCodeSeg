@@ -12,10 +12,10 @@ function download(text, name, type) {
   }
 
 async function fetchText() {
-let nfetch = await import('node-fetch');
+const { fetch } = await import('node-fetch');
 
 let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
-let response = await nfetch.fetch(url);
+let response = await fetch(url);
 if (response.status === 200) {
     let content = await response.text();
     let pid = "10.18710/TLA01U";
