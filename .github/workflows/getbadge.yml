@@ -21,8 +21,8 @@ jobs:
 
       - name: Install deps
         run: |
-          rm -rf node_modules
-          npm install
+          npm i node-fetch jsdom fs
+          npm list
 
       - uses: actions/github-script@v6
         with:
@@ -35,13 +35,14 @@ jobs:
             //const { fetch } = await import('node-fetch');  // dynamic import don't work as it should with node-fetch?
             //const { fetch } = require('node-fetch');
 
-            const { default: fetch } = await import('node-fetch.js')
+            //const { default: fetch } = await import('node-fetch.js')
+            var nf = require("node-fetch");
             const { JSDOM } = require("jsdom");
             const { default: document } = (new JSDOM(`...`)).window;
             var fs = require('fs')
 
             let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
-            let response = await fetch(url);
+            let response = await nf.fetch(url);
             if (response.status === 200) {
                 let content = await response.text();
                 let pid = "10.18710/TLA01U";
