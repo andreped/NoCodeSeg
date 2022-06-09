@@ -24,9 +24,9 @@ jobs:
 
       - name: Get info
         run: |
+          cd assets/
+          wget "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu"
           ls -haltr
-          python ".source/html/generate-badge.py"
+          python generate_badge.py
           ls -haltr
-
-            
             
