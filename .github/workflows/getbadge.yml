@@ -35,10 +35,13 @@ jobs:
           python generate_badge.py
           ls -haltr
 
-      - name: Commit update
+      - name: Add bot user
         run: |
           git config --local user.email "some.bot@gmail.com"
           git config --local user.name "[bot]"
+
+      - name: Commit update
+        run: |
           git add ${{github.workspace}}/assets/test.md
           git commit -m "Update download count [skip ci]" -a
 
