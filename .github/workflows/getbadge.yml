@@ -20,7 +20,7 @@ jobs:
           node-version: 14
 
       - name: Install deps
-        run: npm install node-fetch
+        run: npm install node-fetch@2
 
       - uses: actions/github-script@v6
         with:
