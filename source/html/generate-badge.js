@@ -15,10 +15,6 @@
 
 async function fetchText() {
     //const { fetch } = await import('node-fetch');  // dynamic import don't work as it should with node-fetch?
-    const { default: fetch } = await import('node-fetch')
-    const { JSDOM } = require("jsdom");
-    const { default: document } = (new JSDOM(`...`)).window;
-    var fs = require('fs')
 
     let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
     let response = await fetch(url);
