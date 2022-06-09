@@ -10,10 +10,12 @@ on:
   #  - cron: "0 12 * * 1"
 
 jobs:
-  build:
+  auto-update-readme:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Markdown autodocs
-      - uses: dineshsonachalam/markdown-autodocs@v1.0.3
-        output_file_paths: '[./source/html/badge.md]'
+        uses: dineshsonachalam/markdown-autodocs@v1.0.4
+        with:
+          output_file_paths: '[./source/html/badge.md]'
 
