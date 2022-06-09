@@ -21,7 +21,7 @@ jobs:
 
       - name: Install deps
         run: |
-          npm i node-fetch jsdom fs
+          npm i node-fetch@2.6.6 jsdom fs
           npm list
 
       - uses: actions/github-script@v6
