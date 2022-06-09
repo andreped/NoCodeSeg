@@ -1,5 +1,3 @@
-let nfetch = await import('node-fetch');
-
 // fetch badge as html code
 var returned_text = fetchText();
 
@@ -14,6 +12,8 @@ function download(text, name, type) {
   }
 
 async function fetchText() {
+let nfetch = await import('node-fetch');
+
 let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
 let response = await nfetch.fetch(url);
 if (response.status === 200) {
