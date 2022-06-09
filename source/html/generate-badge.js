@@ -13,7 +13,8 @@
 //    a.download = name;
 //}
 
-function fetchText() {
+/*
+async function fetchText() {
     //const { fetch } = await import('node-fetch');  // dynamic import don't work as it should with node-fetch?
 
     //const { default: fetch } = await import('node-fetch')
@@ -39,6 +40,7 @@ function fetchText() {
         //badgeId.innerHTML += output;
     }
 }
+ */
 
 function getBadge(content, pidToFind) {
     var x = content.split("\n");
