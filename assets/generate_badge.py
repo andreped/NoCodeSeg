@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 
 
-path = "./filedownloads.csv"
+path = "filedownloads?parentAlias=ntnu"
 data = np.asarray(pd.read_csv(path, delimiter=None))
 pid2find = "10.18710/TLA01U"
 
