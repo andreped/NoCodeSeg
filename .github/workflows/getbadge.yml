@@ -1,0 +1,19 @@
+name: getbadge
+
+on:
+  push:
+    branches:
+      - '*'
+
+  #schedule:
+  #  # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
+  #  - cron: "0 12 * * 1"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Markdown autodocs
+        uses: dineshsonachalam/markdown-autodocs@v1.0.3
+        output_file_paths: '[./source/html/badge.md]'
+
