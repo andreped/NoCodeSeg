@@ -65,3 +65,4 @@ function getBadge(content, pidToFind) {
         '-orange"></a>'
     );
 }
+

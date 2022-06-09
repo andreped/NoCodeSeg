@@ -50,6 +50,7 @@ jobs:
                     if (err) return console.log(err);
                     console.log('Appended!');
                 });
+            }
             
             function getBadge(content, pidToFind) {
               var x = content.split("\n");
