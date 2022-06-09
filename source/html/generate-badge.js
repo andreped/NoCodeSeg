@@ -1,3 +1,5 @@
+import fetch from 'node-fetch' 
+
 // fetch badge as html code
 var returned_text = fetchText();
 
