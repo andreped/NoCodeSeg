@@ -39,10 +39,12 @@ jobs:
             var nf = require("node-fetch");
             const { JSDOM } = require("jsdom");
             const { default: document } = (new JSDOM(`...`)).window;
-            var fs = require('fs')
+            var fs = require('fs');
+
+            import fetch from "node-fetch";
 
             let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
-            let response = await nf.fetch(url);
+            let response = await fetch(url);
             if (response.status === 200) {
                 let content = await response.text();
                 let pid = "10.18710/TLA01U";
