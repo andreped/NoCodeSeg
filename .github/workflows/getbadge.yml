@@ -14,6 +14,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Markdown autodocs
-        uses: dineshsonachalam/markdown-autodocs@v1.0.3
+      - uses: dineshsonachalam/markdown-autodocs@v1.0.3
         output_file_paths: '[./source/html/badge.md]'
 
