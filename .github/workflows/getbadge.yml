@@ -18,9 +18,9 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: npm ci
-      # or one-off:
-      - run: npm install node-fetch
+      
+      - name: Install deps
+        run: npm install node-fetch
 
       - uses: actions/github-script@v6
         with:
