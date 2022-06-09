@@ -18,7 +18,7 @@ async function fetchText() {
     const { default: fetch } = await import('node-fetch')
     const { JSDOM } = require("jsdom");
     const { default: document } = (new JSDOM(`...`)).window;
-    const {default: appendFile} = await import('fs')
+    var fs = require('fs')
 
     let url = "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu";
     let response = await fetch(url);
@@ -28,7 +28,7 @@ async function fetchText() {
         let output = getBadge(content, pid);
         
         // write result to disk
-        appendFile('./test.txt', output, function (err) {
+        fs.appendFile('./test.txt', output, function (err) {
             if (err) return console.log(err);
             console.log('Appended!');
          });
