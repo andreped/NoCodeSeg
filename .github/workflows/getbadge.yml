@@ -31,11 +31,15 @@ jobs:
       - name: Install deps
         run: pip install numpy pandas
 
+      - name: Remove Outdated file
+        run: |
+          git rm --cached ${{github.workspace}}/assets/test.md
+          git add .
+          git commit -m "removed file temporarily"
+
       - name: Get info
         run: |
           cd assets/
-          rm ${{github.workspace}}/assets/test.md
-          git add .
           wget "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu"
           ls -haltr
           python generate_badge.py
