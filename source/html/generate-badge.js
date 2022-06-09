@@ -13,7 +13,7 @@
 //    a.download = name;
 //}
 
-async function fetchText() {
+function fetchText() {
     //const { fetch } = await import('node-fetch');  // dynamic import don't work as it should with node-fetch?
     const { default: fetch } = await import('node-fetch')
     const { JSDOM } = require("jsdom");
