@@ -98,7 +98,7 @@ In addition, if you used the data set in your work, please cite the following:
   publisher = {DataverseNO},
   title = {{140 HE and 111 CD3-stained colon biopsies of active and inactivate inflammatory bowel disease with epithelium annotated: the IBDColEpi dataset}},
   year = {2021},
-  version = {V1},
+  version = {V2},
   doi = {10.18710/TLA01U},
   url = {https://doi.org/10.18710/TLA01U}}
 </pre>
