@@ -36,6 +36,6 @@ print("generated html line: ", ret)
 
 imgkit.from_string(ret, "badge.png", options=options)
 
-imgkit.from_string(ret, "badge.svg", options=options)
+imgkit.from_string(ret, "badge.svg")
 
 
