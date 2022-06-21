@@ -46,3 +46,14 @@ jobs:
         file_glob: true
         tag: download-badge
         overwrite: true
+
+    - name: Update SVG in release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_name: andreped/NoCodeSeg
+        repo_token: ${{ secrets.CI }}
+        file: ${{github.workspace}}/assets/badge.svg
+        asset_name: badge.svg
+        file_glob: true
+        tag: download-badge
+        overwrite: true
