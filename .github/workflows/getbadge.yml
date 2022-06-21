@@ -18,24 +18,13 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
-      - name: Add bot user
-        run: |
-          git config --local user.email "some.bot@gmail.com"
-          git config --local user.name "[bot]"
-
       - name: Set up Python 3.7
         uses: actions/setup-python@v2
         with:
           python-version: 3.7
       
       - name: Install deps
-        run: pip install numpy pandas
-
-      - name: Remove Outdated file
-        run: |
-          git rm --cached ${{github.workspace}}/assets/test.md
-          git add .
-          git commit -m "removed file temporarily"
+        run: pip install numpy pandas aspose-words
 
       - name: Get info
         run: |
@@ -44,22 +33,4 @@ jobs:
           ls -haltr
           python generate_badge.py
           ls -haltr
-
-      - name: Commit update
-        run: |
-          git status
-          git diff
-          git add ${{github.workspace}}/assets/test.md
-          git commit -m "Update download count [skip ci]" -a
-
-      - name: Push changes
-        uses: ad-m/github-push-action@master
-        with:
-          force: false
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.master }}
-
-      # auto-doc
-      - name: Markdown autodocs
-        uses: dineshsonachalam/markdown-autodocs@v1.0.4
             
