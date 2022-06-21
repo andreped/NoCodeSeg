@@ -1,5 +1,6 @@
 import numpy as np
 import pandas as pd
+import aspose.words as aw
 
 
 path = "filedownloads?parentAlias=ntnu"
@@ -21,5 +22,17 @@ ret = '<a href="https://doi.org/' + \
 
 print("generated html line: ", ret)
 
-with open("test.md", "w") as f:
-	f.write(ret)
+# with open("test.html", "w") as f:
+# 	f.write(ret)
+
+# create blank document
+doc = aw.Document()
+
+# Use a document builder to add content to the document
+builder = aw.DocumentBuilder(doc)
+
+# Write a new paragraph in the document with the text generated above into the file
+builder.writeln(ret)
+
+# Save the document in DOCX format. Save format is automatically determined from the file extension.
+doc.save("test.svg")
