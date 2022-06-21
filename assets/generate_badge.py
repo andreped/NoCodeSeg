@@ -5,8 +5,8 @@ import imgkit
 
 options = {
     'format': 'png',
-    'crop-h': '30',
-    'crop-w': '70',
+    'crop-h': '25',
+    'crop-w': '200',
     'crop-x': '5',
     'crop-y': '5',
     'encoding': "UTF-8",
