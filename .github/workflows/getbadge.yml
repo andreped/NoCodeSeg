@@ -6,9 +6,10 @@ on:
       - '*'
   schedule:
   # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
-  # - cron: "0 12 * * 1"
+  - cron: '0 0 * * *'
+
   # trigger workflow every minute
-  - cron: '*/5 * * * *'
+  # - cron: '*/5 * * * *'
 
 jobs:
   update-downloads: 
