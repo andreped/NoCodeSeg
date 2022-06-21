@@ -5,43 +5,43 @@ on:
     branches: 
       - '*'
   schedule:
-    # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
-    # - cron: "0 12 * * 1"
-    # trigger workflow every minute
-    - cron: '5 * * * *'
+  # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
+  # - cron: "0 12 * * 1"
+  # trigger workflow every minute
+  - cron: '*/5 * * * *'
 
 jobs:
   update-downloads: 
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-        with:
-          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
-          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+        fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository.
 
-      - name: Set up Python 3.7
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.7
-      
-      - name: Install deps
-        run: |
-          pip install numpy pandas imgkit
-          sudo apt-get install wkhtmltopdf
+    - name: Set up Python 3.7
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.7
+    
+    - name: Install deps
+      run: |
+        pip install numpy pandas imgkit
+        sudo apt-get install wkhtmltopdf
 
-      - name: Get info
-        run: |
-          cd assets/
-          wget "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu"
-          python generate_badge.py
-      
-      - name: Upload package to external repo release
-        uses: svenstaro/upload-release-action@v2
-        with:
-          repo_name: andreped/NoCodeSeg
-          repo_token: ${{ secrets.CI }}
-          file: ${{github.workspace}}/assets/badge.png
-          asset_name: badge.png
-          file_glob: true
-          tag: download-badge
-          overwrite: true
+    - name: Get info
+      run: |
+        cd assets/
+        wget "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu"
+        python generate_badge.py
+    
+    - name: Upload package to external repo release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_name: andreped/NoCodeSeg
+        repo_token: ${{ secrets.CI }}
+        file: ${{github.workspace}}/assets/badge.png
+        asset_name: badge.png
+        file_glob: true
+        tag: download-badge
+        overwrite: true
