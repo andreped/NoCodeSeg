@@ -22,8 +22,4 @@ ret = '<a href="https://doi.org/' + \
 
 print("generated html line: ", ret)
 
-with open("test.html", "w") as f:
-	f.write(ret)
-
-with open('test.svg', "w") as ff:
-    imgkit.from_file(ff, 'test.html')
+imgkit.from_string(ret, "test.svg")
