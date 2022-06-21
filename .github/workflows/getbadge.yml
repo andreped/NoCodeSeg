@@ -37,8 +37,8 @@ jobs:
       - name: Upload package to external repo release
         uses: svenstaro/upload-release-action@v2
         with:
-          repo_name: AICAN-Research/FAST-Pathology-dependencies
-          repo_token: ${{ secrets.FAST_PATHOLOGY_PUSH_TOKEN }}
+          repo_name: andreped/NoCodeSeg
+          repo_token: ${{ secrets.CI }}
           file: ${{github.workspace}}/assets/test.svg
           asset_name: test.svg
           file_glob: true
