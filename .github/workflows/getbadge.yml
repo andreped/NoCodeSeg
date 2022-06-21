@@ -5,7 +5,7 @@ on:
     # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
     # - cron: "0 12 * * 1"
     # trigger workflow every minute
-    - update-downloads: "*/1 * * * *"
+    - cron: "*/1 * * * *"
 
 jobs:
   update-downloads:
