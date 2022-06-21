@@ -32,9 +32,7 @@ jobs:
         run: |
           cd assets/
           wget "https://dataverse.no/api/info/metrics/filedownloads?parentAlias=ntnu"
-          ls -haltr
           python generate_badge.py
-          ls -haltr
       
       - name: Upload package to external repo release
         uses: svenstaro/upload-release-action@v2

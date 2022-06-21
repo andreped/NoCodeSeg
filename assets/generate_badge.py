@@ -6,15 +6,14 @@ import imgkit
 options = {
     'format': 'png',
     'crop-h': '22',
-    'crop-w': '190',
-    'crop-x': '10',
+    'crop-w': '180',
+    'crop-x': '7',
     'crop-y': '7',
     'encoding': "UTF-8",
     'custom-header' : [
         ('Accept-Encoding', 'gzip')
     ]
 }
-
 
 path = "filedownloads?parentAlias=ntnu"
 data = np.asarray(pd.read_csv(path, delimiter=None))
