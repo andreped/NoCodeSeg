@@ -24,7 +24,9 @@ jobs:
           python-version: 3.7
       
       - name: Install deps
-        run: pip install numpy pandas aspose-words
+        run: |
+          pip install numpy pandas imgkit
+          apt-get install wkhtmltopdf
 
       - name: Get info
         run: |
