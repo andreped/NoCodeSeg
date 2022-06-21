@@ -41,8 +41,8 @@ jobs:
         with:
           repo_name: andreped/NoCodeSeg
           repo_token: ${{ secrets.CI }}
-          file: ${{github.workspace}}/assets/test.svg
-          asset_name: test.svg
+          file: ${{github.workspace}}/assets/test.png
+          asset_name: test.png
           file_glob: true
           tag: SVG-badge
           overwrite: true
