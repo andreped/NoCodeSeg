@@ -5,10 +5,10 @@ import imgkit
 
 options = {
     'format': 'png',
-    'crop-h': '22',
+    'crop-h': '21',
     'crop-w': '180',
     'crop-x': '7',
-    'crop-y': '7',
+    'crop-y': '8',
     'encoding': "UTF-8",
     'custom-header' : [
         ('Accept-Encoding', 'gzip')
