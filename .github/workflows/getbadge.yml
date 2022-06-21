@@ -1,13 +1,11 @@
 name: getbadge
 
 on:
-  push:
-    branches: 
-      - '*'
-
-  #schedule:
-  #  # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
-  #  - cron: "0 12 * * 1"
+  schedule:
+    # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
+    # - cron: "0 12 * * 1"
+    # trigger workflow every minute
+    - cron: "*/1 * * * *"
 
 jobs:
   get-download-count:
