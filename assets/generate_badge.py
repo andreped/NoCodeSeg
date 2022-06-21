@@ -6,7 +6,7 @@ import imgkit
 options = {
     'format': 'png',
     'crop-h': '20',
-    'crop-w': '177',
+    'crop-w': '176',
     'crop-x': '8',
     'crop-y': '8',
     'encoding': "UTF-8",
