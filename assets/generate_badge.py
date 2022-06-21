@@ -34,4 +34,4 @@ ret = '<a href="https://doi.org/' + \
 
 print("generated html line: ", ret)
 
-imgkit.from_string(ret, "test.png", options=options)
+imgkit.from_string(ret, "badge.png", options=options)
