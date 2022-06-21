@@ -1,8 +1,0 @@
-{
-    "type": "commonjs",
-    "dependencies": {
-        "node-fetch": "*",
-        "jsdom": "*",
-        "fs": "*"
-    }
-}
