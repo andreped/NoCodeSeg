@@ -26,7 +26,7 @@ jobs:
       - name: Install deps
         run: |
           pip install numpy pandas imgkit
-          apt-get install wkhtmltopdf
+          sudo apt-get install wkhtmltopdf
 
       - name: Get info
         run: |
