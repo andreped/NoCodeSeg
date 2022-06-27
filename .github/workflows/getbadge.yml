@@ -5,8 +5,8 @@ on:
     branches: 
       - '*'
   schedule:
-  # run CI at the end of every day https://jasonet.co/posts/scheduled-actions/
-  - cron: '0 0 * * *'
+  # run CI once a week https://jasonet.co/posts/scheduled-actions/
+  - cron: '0 0 * * 0'
 
   # trigger workflow every minute
   # - cron: '*/5 * * * *'
