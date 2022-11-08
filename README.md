@@ -90,7 +90,7 @@ Please, consider citing our paper, if you find the work useful:
   issn={2296-858X}}
 </pre>
 
-In addition, if you used the data set in your work, please cite the following:
+In addition, if you used the data set in your work, please, cite the following:
 <pre>
   @data{TLA01U_2021,
   author = {Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},
