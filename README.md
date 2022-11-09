@@ -56,12 +56,21 @@ Note that the version of FastPathology used in the demonstration was v0.2.0 (thi
 ## Data
 The 251 annotated WSIs are made openly available for anyone on [DataverseNO](https://doi.org/10.18710/TLA01U). Alternatively, the data can be downloaded directly from Google Drive (click [here](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH?usp=sharing) to access the dataset). Information on how to cite the IBDColEpi dataset can be found on [DataverseNO](https://doi.org/10.18710/TLA01U).
 
-### Reading annotations
+<details>
+<summary>
+
+### Reading annotations</summary>
+
 The annotations are stored as tiled, pyramidal TIFFs, which makes it easy to generate patches from the data without the need for any preprocessing. Reading these files and working with them to generate training data, is already described in the [tutorial video](https://github.com/andreped/NoCodeSeg#getting-started) above.
 
 TL;DR: Load TIFF as annotations in QuPath using provided [groovy script](https://github.com/andreped/NoCodeSeg/blob/main/source/importPyramidalTIFF.groovy) and [exporting](https://github.com/andreped/NoCodeSeg/blob/main/source/exportTiles.groovy) these as labelled tiles.
+</details>
 
-### Reading annotation in Python
+<details>
+<summary>
+
+### Reading annotation in Python</summary>
+
 However, if you wish to use Python, the annotations can be read exactly the same way as regular WSIs (for instance using [OpenSlide](https://pypi.org/project/openslide-python/)):
 ```
 import openslide
@@ -72,9 +81,15 @@ reader.close()
 ```
 
 Pixels here will be one-to-one with the original WSI. To generate patches for training, it is also possible to use [pyFAST](https://pypi.org/project/pyFAST/), which does the patching for you. For an example see [here](https://fast.eriksmistad.no/python-tutorial-wsi.html#autotoc_md133).
+</details>
 
-### Models
+<details>
+<summary>
+
+### Models</summary>
+
 Note that the trained models can only be used for academic purposes due to MIB's license. Trained model files (.mibDeep for MIB and .onnx for FastPathology) are made openly available on [Google Drive](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH). Simply download the file "trained-models.zip" and uncompress to get access the respective files.
+</details>
 
 ## How to cite
 Please, consider citing our paper, if you find the work useful:
