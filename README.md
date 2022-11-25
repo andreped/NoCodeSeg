@@ -91,6 +91,10 @@ Pixels here will be one-to-one with the original WSI. To generate patches for tr
 Note that the trained models can only be used for academic purposes due to MIB's license. Trained model files (.mibDeep for MIB and .onnx for FastPathology) are made openly available on [Google Drive](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH). Simply download the file "trained-models.zip" and uncompress to get access the respective files.
 </details>
 
+## Applications of pipeline
+* Pettersen et al., Code-free development and deployment of deep segmentation models for digital pathology (2022), Frontiers in Medicine, https://doi.org/10.3389/fmed.2021.816281
+* Røyset et al., Deep learning-based image analysis reveals significant differences in the number and distribution of mucosal CD3 and γδ T cells between Crohn's disease and ulcerative colitis, The Journal of Pathology, https://doi.org/10.1002/cjp2.301
+
 ## How to cite
 Please, consider citing our paper, if you find the work useful:
 <pre>
