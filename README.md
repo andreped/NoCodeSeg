@@ -35,7 +35,7 @@ See [here](https://github.com/andreped/NoCodeSeg#data) for how to download the 2
 
 A video tutorial of the proposed pipeline was published on [YouTube](https://www.youtube.com/watch?v=9dTfUwnL6zY&ab_channel=HenrikSahlinPettersen).
 It demonstrates the steps for: 
-* Downloading and installing the softwares
+* Downloading and installing the software
 * QuPath
   * Create a project, then export annotations as patches with label files
   * Export patches from unannotated images for prediction in DeepMIB
@@ -43,7 +43,7 @@ It demonstrates the steps for:
 * MIB
   * Use the annotated patches/labels exported from QuPath
   * Configuring and training deep segmentation models (i.e. U-Net/SegNet)
-  * Use the trained U-net to predict unannotated patches exported from QuPath
+  * Use the trained U-Net to predict unannotated patches exported from QuPath
   * Export trained models into the ONNX format for use in FastPathology
 * FastPathology
   * Importing and creating a configuration file for the DeepMIB exported ONNX model
