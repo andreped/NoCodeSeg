@@ -10,9 +10,12 @@
   <img src="figures/inference-demo.gif" /> 
   <img src="figures/qupath-demo.gif" />
 </p>
+
 -->
 
-<img src="figures/merged-demos.gif" />
+<p align="center">
+  <img src="figures/merged-demos.gif" />
+</p>
 
 
 # NoCodeSeg: Deep segmentation made easy!
