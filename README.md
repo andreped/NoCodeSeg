@@ -4,15 +4,6 @@
 [![Downloads](https://github.com/andreped/NoCodeSeg/releases/download/download-badge/badge.png)](https://doi.org/10.18710/TLA01U)
 
 
-<!---
-<p float="left">
-  <img src="figures/deepmib-demo.gif" />
-  <img src="figures/inference-demo.gif" /> 
-  <img src="figures/qupath-demo.gif" />
-</p>
-
--->
-
 <p align="center">
   <img src="figures/merged-demos.gif" />
 </p>
