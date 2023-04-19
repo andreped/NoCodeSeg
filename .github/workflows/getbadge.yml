@@ -4,6 +4,7 @@ on:
   push:
     branches: 
       - '*'
+  workflow_dispatch:
   schedule:
   # run CI once a week https://jasonet.co/posts/scheduled-actions/
   - cron: '0 0 * * 0'
