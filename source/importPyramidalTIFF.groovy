@@ -29,6 +29,10 @@ int channel = 0                         // 0-based index for the channel to thre
 def fromFP = true                       // whether result is from FastPathology or not, if no, we assume that the TIFF lie directly in the maskPath directory with the same name.
 // ----------------------------
 
+// In case the image has bounds, we need to shift annotations
+def imageServer = getCurrentServer();
+def shiftX = -imageServer.boundsX;
+def shiftY = -imageServer.boundsY;
 
 // Get a list of image files, stopping early if none can be found
 def dirOutput = new File(masksPath);
@@ -76,9 +80,10 @@ classNames.each { currClassName ->
     // Select current annotations
     selectObjectsByClassification(currClassName);
 
-    // Get current annotations, rescale
+    // Get current annotations, rescale and shift
     def oldObjects = getAnnotationObjects().findAll{it.getPathClass() == getPathClass(currClassName)}
-    def transform = java.awt.geom.AffineTransform.getScaleInstance(downsample, downsample)
+    def transform = java.awt.geom.AffineTransform.getTranslateInstance(shiftX, shiftY)
+    transform.concatenate(java.awt.geom.AffineTransform.getScaleInstance(downsample, downsample))
     def newObjects = oldObjects.collect {p -> PathObjectTools.transformObject(p, transform, false)}
 
     // Delete old annotations
