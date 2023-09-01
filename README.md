@@ -86,7 +86,7 @@ Note that the trained models can only be used for academic purposes due to MIB's
 </details>
 
 ## [Applications of pipeline](https://github.com/andreped/NoCodeSeg#applications-of-pipeline)
-* Mallén et al., Sex Differences In Glomerular Lesions, Atherosclerosis Progression, And In The Response To Angiotensin-Converting Enzyme Inhibitors In The Apoe-/- Mice Model, (preprint), https://doi.org/10.20944/preprints202306.0867.v1
+* Mallén et al., Sex Differences In Glomerular Lesions, Atherosclerosis Progression, And In The Response To Angiotensin-Converting Enzyme Inhibitors In The Apoe-/- Mice Model, preprint (2023), https://doi.org/10.20944/preprints202306.0867.v1
 * Røyset et al., Deep learning-based image analysis reveals significant differences in the number and distribution of mucosal CD3 and γδ T cells between Crohn's disease and ulcerative colitis, The Journal of Pathology, https://doi.org/10.1002/cjp2.301
 * Pettersen et al., Code-free development and deployment of deep segmentation models for digital pathology (2022), Frontiers in Medicine, https://doi.org/10.3389/fmed.2021.816281
 
