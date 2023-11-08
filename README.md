@@ -51,7 +51,7 @@ Note that the version of FastPathology used in the demonstration was v0.2.0 (thi
 ## [Data](https://github.com/andreped/NoCodeSeg#data)
 The 251 annotated WSIs are made openly available for anyone on [DataverseNO](https://doi.org/10.18710/TLA01U). Alternatively, the data can be downloaded directly from Google Drive (click [here](https://drive.google.com/drive/folders/1eUVs1DA1UYayUYjr8_aY3O5xDgV1uLvH?usp=sharing) to access the dataset). Information on how to cite the IBDColEpi dataset can be found on [DataverseNO](https://doi.org/10.18710/TLA01U).
 
-<details>
+<details open>
 <summary>
 
 ### [Reading annotations](https://github.com/andreped/NoCodeSeg#reading-annotations)</summary>
@@ -61,7 +61,7 @@ The annotations are stored as tiled, pyramidal TIFFs, which makes it easy to gen
 TL;DR: Load TIFF as annotations in QuPath using provided [groovy script](https://github.com/andreped/NoCodeSeg/blob/main/source/importPyramidalTIFF.groovy) and [exporting](https://github.com/andreped/NoCodeSeg/blob/main/source/exportTiles.groovy) these as labelled tiles.
 </details>
 
-<details>
+<details open>
 <summary>
 
 ### [Reading annotation in Python](https://github.com/andreped/NoCodeSeg#reading-annotation-in-python)</summary>
@@ -74,7 +74,7 @@ Alternatively, click the CoLab button to access the notebook: <a href="https://c
 
 </details>
 
-<details>
+<details open>
 <summary>
 
 ### [Models](https://github.com/andreped/NoCodeSeg#models)</summary>
