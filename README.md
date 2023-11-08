@@ -2,6 +2,7 @@
 [![Paper](https://zenodo.org/badge/DOI/10.1038/s41598-017-17204-5.svg)](https://www.frontiersin.org/articles/10.3389/fmed.2021.816281/full)
 [![video](https://img.shields.io/badge/Video-Presentation-F9D371)]([https://youtu.be/WEgB4lAZyKM](https://www.youtube.com/watch?v=9dTfUwnL6zY))
 [![Downloads](https://github.com/andreped/NoCodeSeg/releases/download/download-badge/badge.png)](https://doi.org/10.18710/TLA01U)
+<a href="https://colab.research.google.com/gist/andreped/d40dbbd619867ac5fa26b640b19da815/ibdcolepi-load-dataset-example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
 
 
 <p align="center">
