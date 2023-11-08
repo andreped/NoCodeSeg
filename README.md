@@ -66,16 +66,12 @@ TL;DR: Load TIFF as annotations in QuPath using provided [groovy script](https:/
 
 ### [Reading annotation in Python](https://github.com/andreped/NoCodeSeg#reading-annotation-in-python)</summary>
 
-However, if you wish to use Python, the annotations can be read exactly the same way as regular WSIs (for instance using [OpenSlide](https://pypi.org/project/openslide-python/)):
-```
-import openslide
+If you wish to use Python, the annotations can be read exactly the same way as regular WSIs (for instance using [pyFAST](https://github.com/smistad/FAST)).
 
-reader = ops.OpenSlide("path-to-annotation-image.tiff")
-patch = reader.read_region(location=(x, y), level, size=(w, h))
-reader.close()
-```
+I have made a Jupyter Notebook demonstrating how to do this [here](https://github.com/andreped/NoCodeSeg/blob/main/notebooks/IBDColEpi-load-dataset-example.ipynb).
 
-Pixels here will be one-to-one with the original WSI. To generate patches for training, it is also possible to use [pyFAST](https://pypi.org/project/pyFAST/), which does the patching for you. For an example see [here](https://fast.eriksmistad.no/python-tutorial-wsi.html#autotoc_md133).
+Alternatively, click the CoLab button to access the notebook: <a href="https://colab.research.google.com/gist/andreped/d40dbbd619867ac5fa26b640b19da815/ibdcolepi-load-dataset-example.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/></a>
+
 </details>
 
 <details>
