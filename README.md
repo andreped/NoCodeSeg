@@ -92,27 +92,29 @@ Note that the trained models can only be used for academic purposes due to MIB's
 ## [How to cite](https://github.com/andreped/NoCodeSeg#how-to-cite)
 Please, consider citing our paper, if you find the work useful:
 <pre>
-  @article{10.3389/fmed.2021.816281,
-  author={Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Simpson, Melanie Rae and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},   
-  title={Code-Free Development and Deployment of Deep Segmentation Models for Digital Pathology},      
-  journal={Frontiers in Medicine},      
-  volume={8},      
-  year={2022},      
-  url={https://www.frontiersin.org/article/10.3389/fmed.2021.816281},       
-  doi={10.3389/fmed.2021.816281},      
-  issn={2296-858X}}
+@article{pettersen2022codefree,
+    title={{Code-Free Development and Deployment of Deep Segmentation Models for Digital Pathology}},
+    author={Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Simpson, Melanie Rae and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},         
+    journal={Frontiers in Medicine},      
+    volume={8},      
+    year={2022},      
+    url={https://www.frontiersin.org/article/10.3389/fmed.2021.816281},       
+    doi={10.3389/fmed.2021.816281},      
+    issn={2296-858X}
+}
 </pre>
 
 In addition, if you used the data set in your work, please, cite the following:
 <pre>
-  @data{TLA01U_2021,
-  author = {Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},
-  publisher = {DataverseNO},
-  title = {{140 HE and 111 CD3-stained colon biopsies of active and inactivate inflammatory bowel disease with epithelium annotated: the IBDColEpi dataset}},
-  year = {2021},
-  version = {V2},
-  doi = {10.18710/TLA01U},
-  url = {https://doi.org/10.18710/TLA01U}}
+@data{pettersen2021ibdcolepi,
+    title = {{140 HE and 111 CD3-stained colon biopsies of active and inactivate inflammatory bowel disease with epithelium annotated: the IBDColEpi dataset}},
+    author = {Pettersen, Henrik Sahlin and Belevich, Ilya and Røyset, Elin Synnøve and Smistad, Erik and Jokitalo, Eija and Reinertsen, Ingerid and Bakke, Ingunn and Pedersen, André},
+    publisher = {DataverseNO},
+    year = {2021},
+    version = {V2},
+    doi = {10.18710/TLA01U},
+    url = {https://doi.org/10.18710/TLA01U}
+}
 </pre>
 
 ## [Acknowledgements](https://github.com/andreped/NoCodeSeg#acknowledgements)
